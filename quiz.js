@@ -40,8 +40,14 @@ btn.addEventListener("click",()=>{
       score=score-0.25;
       
     }
- console.log(score);
-    
+    console.log(score);
+    scoreEl.textContent=`Score:${score}`;  //this will print socre in  webpage
+
+    //the below is for when the quiz is completed(marked with answer) it will write quiz over in place of the question div
+    questionEl.textContent='Quiz Completed'
+
+    //and afeter quiz over the option is still there ,for that empty the option using ''
+    optionEl.textContent=''
+
   })
 })
-//-----------------------------------------------
