@@ -25,8 +25,12 @@ const scoreEl=document.getElementById('score'); //fetch score div
 //MAnipulating DOM
 questionEl.textContent=question;
 
+const shuffleOptionContains=shuffleOption(options)
+
 //Populating the Options div with the buttons
-options.forEach((opt)=>{  
+// options.forEach((opt)=>{   before it was only options.forwach this will iterate to option
+
+shuffleOptionContains.forEach((opt)=>{  //this will iterate over shuffle options array which is returned form shuffleOptions Function
   const btn=document.createElement('button');
   btn.textContent=opt;
   optionEl.appendChild(btn);
@@ -51,3 +55,27 @@ btn.addEventListener("click",()=>{
 
   })
 })
+//Shuffling the options
+
+/* Below is the logic of shuffle option using ARRAY DESTRUCTURING */
+// function shuffleOption(options){  //this options parameter, it should take  array
+
+//   [options[3],options[1]]=[options[1],options[3]] // Ihave used array destructuring fot shuffing the option .But at time it can only replace two option
+
+//   console.log(options)
+
+// }
+
+function shuffleOption(options){
+  for(let i=options.length-1; i>=0 ; i--){   //this loop will start form last element
+
+    const j =Math.floor(Math.random()*i); //semicolon important try removing it will give error that j is not initialized and cannot be used
+
+    [options[i],options[j]]=[options[j],options[i]]
+
+    // console.log(options)  for debugging but to use somewhere else we need to return it
+    return options
+
+  }
+}
+// shuffleOption([1,2,3,4])
