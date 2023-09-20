@@ -49,6 +49,8 @@ const optionEl = document.getElementById('options'); //fetch option div
 
 const scoreEl = document.getElementById('score'); //fetch score div
 
+const nextBtn=document.getElementById('nextBtn');
+
 showQuestion()   //calling the below function for woking of question,option in dom and shuffling option
 
 function showQuestion() {

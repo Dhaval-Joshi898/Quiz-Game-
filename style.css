@@ -83,9 +83,9 @@ body {
    margin-left: 45%;
   }
   #nextBtn{
-    color: white;
+    color:rgb(94, 94, 227);
     font-size: 14px;
-    background: rgb(94, 94, 227);
+    background: white;
     border-radius: 20px;
     padding: 6px;
     height: 28px;
@@ -94,8 +94,8 @@ body {
     cursor: pointer;
   }
   #nextBtn:hover{
-    color:black;
-    background-color: transparent;
-    box-shadow: 2px 3px 2px #0060c0;
+    color:white;
+    background-color: rgb(94, 94, 227);
+  
     
   }
