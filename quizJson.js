@@ -53,6 +53,16 @@ const nextBtn=document.getElementById('nextBtn');
 
 showQuestion()   //calling the below function for woking of question,option in dom and shuffling option
 
+//now writing the next function for getting next question .beacuse user will click next question after answering the current question get form running this showQuestion() function
+
+// here i will add event listener ,when button click do this
+nextBtn.addEventListener('click',()=>{
+
+    optionEl.textContent = '';
+    scoreEl.textContent = `Score:${score}/${totalQues}`;
+    nextQues();
+})
+
 function showQuestion() {
     // destructuring object
     const { correctAnswer, options, question } = quesJSON[currentQues];
@@ -74,17 +84,17 @@ function showQuestion() {
         btn.addEventListener("click", () => {
             if (opt === correctAnswer) {
                 score++;
-                optionEl.textContent = '';//here i have written the logic if answer is right remove the options so that new options is added
+             //   optionEl.textContent = '';//here i have written the logic if answer is right remove the options so that new options is added
                 scoreEl.textContent = `Score:${score}/${totalQues}`;  //to show score on every answer 
 
             } else {
                 score = score - 0.25;
-                optionEl.textContent = '';  // for vevery wrong answer it will keep the option and add other 4 option below
+              //  optionEl.textContent = '';  // for vevery wrong answer it will keep the option and add other 4 option below
                 //here i have written the logic if naswer is wrong remove the options so that new options is added
 
             }
             console.log(score); //for checking debugging
-            currentQues++; //for moving to next index of array of object
+          //  currentQues++; //for moving to next index of array of object
 
             nextQues()
             // if()
@@ -103,11 +113,15 @@ function showQuestion() {
 }
 
 
-function nextQues(){
+function nextQues(){  
+    currentQues++;
+    optionEl.textContent = '';
     if(currentQues==(totalQues)){
-        scoreEl.textContent = `Score:${score}/${totalQues}`;
+        
+        // scoreEl.textContent = `Score:${score}/${totalQues}`;
         questionEl.textContent = 'Quiz Completed';
-        optionEl.textContent = '';
+        // optionEl.textContent = '';
+        nextBtn.remove()
     }
     else{
         showQuestion()
