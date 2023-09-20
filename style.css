@@ -75,3 +75,27 @@ body {
     font-weight: bold;
     color: #333;
   }
+
+  #btn{
+   display: flex;
+   width:50%;
+   justify-content: center ;
+   margin-left: 45%;
+  }
+  #nextBtn{
+    color: white;
+    font-size: 14px;
+    background: rgb(94, 94, 227);
+    border-radius: 20px;
+    padding: 6px;
+    height: 28px;
+    width: 15%;
+    border:2px solid rgb(94, 94, 227);
+    cursor: pointer;
+  }
+  #nextBtn:hover{
+    color:black;
+    background-color: transparent;
+    box-shadow: 2px 3px 2px #0060c0;
+    
+  }
