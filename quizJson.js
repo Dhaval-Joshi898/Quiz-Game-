@@ -22,7 +22,7 @@ const quesJSON = [
         'correctAnswer': 'Chris Evans',
         'options': ['Robert Downey Jr', 'Chris Hemsworth', 'Tom Holland', 'Chris Evans'],
         'question':
-            "Who played Captain america in Avengers?",
+            "Who played Captain America in Avengers?",
     },
     {
         'correctAnswer': 'Robert Downey Jr',
